@@ -612,10 +612,6 @@ address {
 } */
 
 .icon-button {
-  /* position: absolute; */
-  /* top: 50%;
-  transform: translateY(-50%); */
-
   padding: 0;
   margin-left: 10px;
 }
@@ -871,7 +867,10 @@ a {
 
 .form-field input {
   height: 40px;
+}
 
+.form-input,
+.comment {
   width: 100%;
 }
 
@@ -882,15 +881,18 @@ a {
 
 .form-icon {
   fill: var(--primary-text-color);
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .form-input:focus + .form-icon {
   fill: var(--accent-color);
 }
 
-.form-input:focus,
-.comment:focus {
-  outline: 1px solid #2196f3;
+.form-input-thumb:focus-within .form-input,
+.form-input-thumb:focus-within .comment {
+  outline: none;
+  border-color: var(--accent-color);
 }
 
 .form-field input,
@@ -903,6 +905,8 @@ a {
   border-radius: 4px;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  transition: border-color 250ms var(--timing-function);
 }
 
 .form-input {
