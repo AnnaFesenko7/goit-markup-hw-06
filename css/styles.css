@@ -825,6 +825,11 @@ a {
   justify-content: center;
 }
 
+.button-close:hover {
+  fill: var(--accent-color);
+  cursor: pointer;
+}
+
 .backdrop {
   transition: visibility 250ms var(--timing-function),
     opacity 250ms var(--timing-function);
@@ -1000,9 +1005,19 @@ textarea {
   top: 50%;
   transform: translateY(-50%);
 
-  appearance: none;
+  /* appearance: none;
   -webkit-appearance: none;
-  -moz-appearance: none;
+  -moz-appearance: none; */
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 1px;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .icon-checkbox {
